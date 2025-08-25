@@ -9,15 +9,15 @@ public class binarySearch {
         int end=a.length-1;
         while(start<=end){
             int mid=(start+end)/2;
-            if(a[mid]==target){
-                index=mid;
-                break;
-            }
-            else if(a[mid]<target){
+            if(a[mid]<target){
                 start=mid+1;
             }
-            else{
+            else if(a[mid]>target){
                 end=mid-1;
+            }
+            else{
+                index=mid;
+                break;
             }
         }
         System.out.println(index);
