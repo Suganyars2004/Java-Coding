@@ -1,20 +1,27 @@
 public class armstrong {
      public static void main(String[] args) {
-        int a=9474;
-        int b=a;
-        String s=Integer.toString(a);
-        int len=s.length();
+        int a=144;
+        int count=0;
         int result=0;
-        while(a!=0){
-           int x=a%10;
-           result=result+(int)Math.pow(x,len);
-           a=a/10;
+        int temp=a,temp1=a;
+        while(temp>0){
+            count++;
+            temp=temp/10;
         }
-        if(b==result){
-        System.out.println("armstrong number");
+        while(temp1>0){
+            int t=temp1%10;
+            int par=1;
+            for(int j=0;j<count;j++){
+                par*=t;
+            }
+            result+=par;
+            temp1=temp1/10;
         }
-        else{
-            System.out.println("not a armstrong number");
-        }
+     if(a==result){
+        System.out.println("armstrong");;
+     }
+     else{
+        System.out.println("no");
+     }
     }
 }

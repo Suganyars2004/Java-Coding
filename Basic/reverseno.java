@@ -1,16 +1,16 @@
 public class reverseno {
     public static void main(String[] args) {
-        int n=12345;
-        int res=0;
-        while(n!=0){
-            int num=n%10;
-            if(res>Integer.MAX_VALUE/10 || res<Integer.MIN_VALUE/10){
-                System.out.println("0");
-                break;
-            }
-            res=res*10+num;
-            n=n/10;
+        int n=-12345;
+        int digit=0;
+        int t=Math.abs(n);
+        while(t>0){
+            int a=t%10;
+            digit=digit*10+a;
+            t=t/10;
         }
-        System.out.println(res);
+        if(n<0){
+            digit=-digit;
+        }
+        System.out.println(digit);
     } 
 }

@@ -6,24 +6,23 @@ public class prime {
         boolean b=true;
         System.out.println("Enter Number");
         int a=in.nextInt();
+        boolean result=false;
         if(a<=1){
-            b=false;
+            result=false;
         }
         else{
             for(int i=2;i*i<=a;i++){
                 if(a%i==0){
-                    b=false;
-                }
-                else{
-                    b=true;
+                    result=true;
+                    break;
                 }
             }
         }
-        if(b==true){
-            System.out.println("prime Number");
+        if(result==true){
+            System.out.println("Not a prime");
         }
         else{
-            System.out.println("Not a prime Number");
+            System.out.println("Prime number");
         }
         in.close();
     }
