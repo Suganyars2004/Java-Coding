@@ -4,17 +4,17 @@ public class Sort {
     public static void main(String[] args) {
         int a[]={0,1,2,0,1,2};
         for(int i=0;i<a.length;i++){
-            for(int j=0;j<a.length-i-1;j++){
-                int k=j+1;
-                if(a[j]>a[k]){
+            for(int j=1;j<a.length-i;j++){
+                
+                if(a[j-1]>a[j]){
                     int temp=a[j];
-                    a[j]=a[k];
-                    a[k]=temp;
+                    a[j]=a[j-1];
+                    a[j-1]=temp;
                 }
             }
         }
         for(int i:a){
-            System.out.println(a[i]);
+            System.out.println(i);
         }
 
     }
