@@ -10,5 +10,6 @@ public class leapyear {
        else{
         System.out.println("Not a leap yaer");
        }
+       in.close();
     }
 }

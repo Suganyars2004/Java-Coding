@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CountTheTriplets {
     public static void main(String[] args) {
-        int arr[]={1,5,3,2};
+        int arr[]={1,5,3,2};//3+2=5 is also present in array
         int result=count(arr);
         System.out.println(result);
     }
