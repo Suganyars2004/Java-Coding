@@ -1,29 +1,40 @@
 package Sorting;
 
+import java.util.Arrays;
+
 public class QuickSort {
     public static void main(String[] args) {
-        int a[]={5,3,8,4,2,7,10};
-        quick(a);
+        int a[]={1,5,3,8,4,2,7,10};
+        quick(a,0,a.length-1);
+
+            System.out.print(Arrays.toString(a));
     }
-    static void quick(int arr[]){
-      int pivot=arr[0];
-      int i=0;
-      int j=arr.length-1;
+    static void quick(int arr[],int low,int high){
+      if(low>=high){
+        return;
+      }
+      int pivot=arr[low];
+      int i=low;
+      int j=high;
       while(i<j){
-        while(arr[i]<=pivot){
+        while(i<=high && arr[i]<=pivot){
             i++;
         }
-        while(arr[j]>pivot){
+        while(j>=low && arr[j]>pivot){
             j--;
         }
         if(i<j){
             int temp=arr[i];
             arr[i]=arr[j];
             arr[j]=temp;
+            i++;
+            j--;
         }
-      }
-      int temp=arr[j];
-      arr[j]=pivot;
-      pivot=temp;
+        }
+        int temp=arr[j];
+        arr[j]=arr[low];
+        arr[low]=temp;
+        quick(arr,low,j-1);
+        quick(arr, j+1,high);
     }
 }

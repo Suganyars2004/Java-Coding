@@ -1,6 +1,6 @@
 package Arrays;
 
-import java.util.Arrays;
+
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
@@ -9,17 +9,17 @@ public class RemoveDuplicates {
         System.out.println(result);
         }
         static int duplicates(int a[]){
-            int left=0;
+            int j=0;
             for(int i=1;i<a.length;i++){
-                if(a[left]==a[i]){
-                   continue;
+                if(a[i]==a[j]){
+                    continue;
                 }
                 else{
-                    left++;
-                    a[left]=a[i];
+                    j++;
+                    a[j]=a[i];
                 }
             }
-            return left+1;
+            return j+1;
         }
     }
 

@@ -1,7 +1,5 @@
 package Arrays;
-
 import java.util.HashMap;
-
 public class LongetstSubarray {
     public static void main(String[] args) {
         int arr[] = {10, 5, 2, 7, 1, -10};
@@ -18,7 +16,6 @@ public class LongetstSubarray {
          sum+=arr[i];
          if(map.containsKey(sum-k)){
             maxLen=Math.max(maxLen,i-map.get(sum-k));
-            
          }
             map.putIfAbsent(sum, i);
        }

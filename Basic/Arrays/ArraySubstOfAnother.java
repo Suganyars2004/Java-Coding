@@ -1,28 +1,31 @@
 package Arrays;
 
+import java.util.HashMap;
+
 public class ArraySubstOfAnother {
     public static void main(String[] args) {
-        int a[]={1,2,2};
-        int b[]={1,1};
-        boolean res=false;;
+        int a[]={11,7,1,13,21,3,7,3};
+        int b[]={11,3,7,1,7};
+        boolean res=true;
+       HashMap <Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<a.length;i++){
+          if(map.containsKey(a[i])){
+            map.put(a[i],map.get(a[i])+1);
+          }
+          else{
+          map.put(a[i],1);
+          }
+        }
         for(int i=0;i<b.length;i++){
-            for(int j=0;j<a.length;j++){
-              if(b[i]==a[j]){
-                res=true;
-                a[j]=0;
-                break;
+            if(map.containsKey(b[i])&&(map.get(b[i])>0)){
+                map.put(b[i],map.get(b[i])-1);
               }
-              else{
-                res=false;
-              }
-            }
-            if(res==false){
-                System.out.println(res);
-                break;
-            }
+            else{
+              res=false;
+              break;
         }
-        if(res==true){
-            System.out.println(res);
-        }
+            res=true;
+      }
+        System.out.println(res);
     }
 }

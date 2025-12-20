@@ -1,51 +1,47 @@
 package Sorting;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int arr[]={1,5,3,0,9,6};
-        divide(arr,0,arr.length);
-         System.out.println(Arrays.toString(arr));
+        int arr[] = {1, 5, 3, 0, 9, 6};
+        divide(arr, 0, arr.length);
+        System.out.println(Arrays.toString(arr));
     }
-    public static void divide(int arr[],int start,int end){
-        if(start>=end){
-            return;
+
+    public static void divide(int arr[], int start, int end) {
+        if (end - start <= 1) {
+            return;  // base case: one element
         }
-        int mid=(start+end)/2;
+        int mid = (start + end) / 2;
         divide(arr, start, mid);
-        divide(arr, mid+1, end);
-        sorting(arr,start, mid, end);
+        divide(arr, mid, end);
+        sorting(arr, start, mid, end);
     }
-    public static void sorting(int arr[],int start,int mid,int end){
-        int a[]=new int[arr.length];
-        int i=start,j=mid+1,k=start;
-         while(i<=mid && j<=end){
-            if(arr[i]<arr[j]){
-                a[k]=arr[i];
-                i++;
-                k++;
+
+    public static void sorting(int arr[], int start, int mid, int end) {
+        int temp[] = new int[end - start];
+        int i = start, j = mid, k = 0;
+
+        // merge two halves
+        while (i < mid && j < end) {
+            if (arr[i] <= arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
             }
-            else{
-                a[k]=arr[j];
-                j++;
-                k++;
-            }
-         }
-         while(i<=mid){
-            a[k]=arr[i];
-            i++;
-            k++;
-         }
-          while(j<end){
-            a[k]=arr[j];
-            j++;
-            k++;
-         }
-         for(int io=start;io<end;io++){
-            arr[io]=a[io];
-         }
-      
+        }
+
+        // copy remaining elements
+        while (i < mid) {
+            temp[k++] = arr[i++];
+        }
+        while (j < end) {
+            temp[k++] = arr[j++];
+        }
+
+        for (int p = 0; p < temp.length; p++) {
+            arr[start + p] = temp[p];
+        }
     }
 }

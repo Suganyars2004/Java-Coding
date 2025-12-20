@@ -1,6 +1,5 @@
 package TwoPointer;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
@@ -17,7 +16,7 @@ public class TwoSum {
        for(int i=0;i<a.length;i++){
         int res=target-a[i];
         if(map.containsKey(res)){
-            return new int[]{map.get(res),i};//because returning complent oda index and i value
+            return new int[]{map.get(res),i};//because returning complement oda index and i value
         }
         map.put(a[i],i);
        }
