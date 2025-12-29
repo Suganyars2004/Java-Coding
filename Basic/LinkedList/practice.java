@@ -1,5 +1,4 @@
 package LinkedList;
-import java.util.LinkedList;
 class Node{
     int data;
     Node next;
@@ -8,7 +7,6 @@ class Node{
       this.next=null;
     }
 }
-
 public class practice {
      Node head=null;
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Arrays.Strings;
+package Strings;
 //change upper to lower case and vice verse
 public class ToggleCase {
     public static void main(String[] args) {

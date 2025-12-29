@@ -1,6 +1,6 @@
 public class countdigits {
      public static void main(String[] args) {
-        int a=0;
+        int a=-1234;
         int count=0;
         a=Math.abs(a);
         if(a==0){

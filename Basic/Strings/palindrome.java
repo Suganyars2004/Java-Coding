@@ -1,4 +1,4 @@
-package Arrays.Strings;
+package Strings;
 
 public class palindrome {
     public static void main(String[] args) {

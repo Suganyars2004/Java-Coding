@@ -1,4 +1,4 @@
-package Arrays.Strings;
+package Strings;
 
 public class RemoveVowels {
     public static void main(String[] args) {

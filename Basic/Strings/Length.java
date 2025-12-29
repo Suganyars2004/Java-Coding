@@ -1,4 +1,4 @@
-package Arrays.Strings;
+package Strings;
 //length without len function
 public class Length {
     public static void main(String[] args) {

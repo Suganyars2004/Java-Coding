@@ -11,5 +11,6 @@ public class square {
             }
             System.out.println();
         }
+        in.close();
     }
 }
