@@ -1,4 +1,4 @@
-public class countdigits {
+public class CountDigits {
      public static void main(String[] args) {
         int a=-1234;
         int count=0;

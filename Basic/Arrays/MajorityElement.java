@@ -1,22 +1,37 @@
 package Arrays;
-import java.util.Arrays;
+
+//moores voting algorithm
 public class MajorityElement {
     public static void main(String[] args) {
         int a[]={6,6,6,7,7};
-        Arrays.sort(a);
-        int count=1,maxCount=0,output=a[0];
-        for(int i=1;i<a.length;i++){
-            if(a[i-1]==a[i]){
+        int i=0;
+        int count=0;
+        int element=0;
+        while(i<a.length){
+            if(count==0){
+            count++;
+            element=a[i];
+            }
+            else if(a[i]==element){
                 count++;
-                if(count>maxCount){
-                    maxCount=count;
-                    output=a[i];
-                }
             }
             else{
-                count=1;
+                count--;
             }
+            i++;
         }
-        System.out.println(output);
+        int b=0;
+        for(int j=0;j<a.length;j++){
+             if(a[j]==element){
+                b++;
+             }
+        }
+        if(b>a.length/2){
+System.out.println(element);
+        }
+        else{
+            System.out.println("-1");
+        }
+        
     }   
 }

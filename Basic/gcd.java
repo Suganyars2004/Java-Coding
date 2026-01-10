@@ -1,4 +1,4 @@
-public class gcd {
+public class Gcd {
      public static void main(String[] args) {
         int a=18;
         int b=48;

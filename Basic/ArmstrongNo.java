@@ -1,6 +1,6 @@
-public class armstrong {
+public class ArmstrongNo {
      public static void main(String[] args) {
-        int a=144;
+        int a=12;
         int count=0;
         int result=0;
         int temp=a,temp1=a;

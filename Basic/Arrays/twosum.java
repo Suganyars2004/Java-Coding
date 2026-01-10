@@ -1,6 +1,7 @@
 package Arrays;
 
 import java.util.Arrays;
+import java.util.HashMap;
 public class twosum {
     public static void main(String[] args) {
         int a[]={11,2,8,15,7};
@@ -9,18 +10,15 @@ public class twosum {
         System.out.println(Arrays.toString(b));
     }
     static int[] twosum(int a[],int target){
-        int start=0;
-        int b[]=new int[2];
-        while(start<a.length){
-            for(int i=start+1;i<a.length;i++){
-                if(a[i]+a[start]==target){
-                    b[0]=start;
-                    b[1]=i;
-               
-                }
-            }
-            start++;
+        HashMap <Integer,Integer> map=new HashMap<>();
+        int result=0;
+        for(int i=0;i<a.length;i++){
+           result=target-a[i];
+           if(map.containsKey(result)){
+            return new int[]{map.get(result),i};
+           }
+           map.put(a[i], i);
         }
-        return b;
+        return new int[]{};
     }
 }

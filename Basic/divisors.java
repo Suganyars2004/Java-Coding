@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class divisors {
+public class Divisors {
         public static void main(String[] args) {
         int n=36;
         ArrayList<Integer>list=new ArrayList<>();

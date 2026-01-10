@@ -1,4 +1,4 @@
-public class palindrome {
+public class CheckPalindrome {
     public static void main(String[] args) {
         int a=121;
         int b=a;
