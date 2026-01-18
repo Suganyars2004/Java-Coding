@@ -1,5 +1,3 @@
-package Recursion;
-
 public class namesNTimes {
     public static void main(String[] args) {
         int n=5;

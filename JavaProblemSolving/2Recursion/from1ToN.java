@@ -1,4 +1,4 @@
-package Recursion;
+
 
 public class from1ToN {
     public static void main(String[] args) {

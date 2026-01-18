@@ -1,4 +1,3 @@
-package Recursion;
 
 public class sumOfFirstNNumbers {
     public static void main(String[] args) {
