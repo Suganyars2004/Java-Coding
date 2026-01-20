@@ -18,7 +18,6 @@ public class practice {
         list.display();
         list.deleteIndex(0);
         list.display();
-
     }
     void insertMiddle(int data,int index){
         Node newNode=new Node(data);
