@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.medium;
 
 public class Sort {
     public static void main(String[] args) {

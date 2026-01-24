@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.medium;
 
 //moores voting algorithm
 public class MajorityElement {

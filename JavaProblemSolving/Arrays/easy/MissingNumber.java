@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 
 
 //ip=[0,2,3]

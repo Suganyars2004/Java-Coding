@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 
 public class RotateArrayByK {
     public static void main(String[] args) {

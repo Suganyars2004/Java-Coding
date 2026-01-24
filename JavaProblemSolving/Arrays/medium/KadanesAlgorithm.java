@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.medium;
 
 public class KadanesAlgorithm {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 
 public class SecondLargest {
     public static void main(String[] args) {

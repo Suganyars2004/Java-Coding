@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 public class largestElement{
     public static void main(String[] args) {
         int nums[]={3,3,0,99,-40};

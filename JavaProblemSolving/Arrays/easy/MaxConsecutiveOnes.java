@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 
 public class MaxConsecutiveOnes {
     public static void main(String[] args) {

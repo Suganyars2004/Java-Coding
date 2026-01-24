@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.easy;
 import java.util.HashMap;
 public class LongetstSubarray {
     public static void main(String[] args){
